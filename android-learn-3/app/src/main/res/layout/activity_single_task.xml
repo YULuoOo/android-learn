@@ -14,6 +14,11 @@
         android:layout_height="wrap_content"
         android:text="start 2"/>
     <Button
+        android:id="@+id/b33"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="start singleTask itself"/>
+    <Button
         android:id="@+id/b34"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

@@ -46,6 +46,12 @@ public class singleInstanceActivity extends AppCompatActivity {
         Log.w(TAG,"singleInstanceActivity onRestart");
     }
     @Override
+    protected void onNewIntent(Intent intent) {
+        super.onNewIntent(intent);
+        Log.i(TAG,"singleInstanceActivity onNewIntent");
+    }
+
+    @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_single_instance);

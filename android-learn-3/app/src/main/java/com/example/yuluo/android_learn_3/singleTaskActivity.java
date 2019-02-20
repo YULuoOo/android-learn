@@ -46,13 +46,20 @@ public class singleTaskActivity extends AppCompatActivity {
         Log.w(TAG,"singleTaskActivity onRestart");
     }
     @Override
+    protected void onNewIntent(Intent intent) {
+        super.onNewIntent(intent);
+        Log.i(TAG,"singleTaskActivity onNewIntent");
+    }
+
+    @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_single_task);
         Log.i(TAG,"singleTaskActivity onCreate");
         Button start1 = (Button) findViewById(R.id.b31);
         Button start2 = (Button) findViewById(R.id.b32);
-        Button start3 = (Button) findViewById(R.id.b34);
+        Button start3 = (Button) findViewById(R.id.b33);
+        Button start4 = (Button) findViewById(R.id.b34);
 
 
         start1.setOnClickListener(new View.OnClickListener() {
@@ -70,6 +77,13 @@ public class singleTaskActivity extends AppCompatActivity {
             }
         });
         start3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(singleTaskActivity.this,singleTaskActivity.class);
+                startActivity(intent);
+            }
+        });
+        start4.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(singleTaskActivity.this,singleInstanceActivity.class);

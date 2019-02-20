@@ -9,6 +9,11 @@
         android:layout_height="wrap_content"
         android:text="start 1"/>
     <Button
+        android:id="@+id/b22"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="start singleTop itself"/>
+    <Button
         android:id="@+id/b23"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

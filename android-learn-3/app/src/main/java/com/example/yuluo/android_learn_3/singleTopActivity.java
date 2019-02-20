@@ -47,13 +47,20 @@ public class singleTopActivity extends AppCompatActivity {
         Log.w(TAG,"singleTopActivity onRestart");
     }
     @Override
+    protected void onNewIntent(Intent intent) {
+        super.onNewIntent(intent);
+        Log.i(TAG,"singleTopActivity onNewIntent");
+    }
+
+    @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_single_top);
         Log.i(TAG,"singleTopActivity onCreate");
         Button start1 = (Button) findViewById(R.id.b21);
-        Button start2 = (Button) findViewById(R.id.b23);
-        Button start3 = (Button) findViewById(R.id.b24);
+        Button start2 = (Button) findViewById(R.id.b22);
+        Button start3 = (Button) findViewById(R.id.b23);
+        Button start4 = (Button) findViewById(R.id.b24);
 
 
         start1.setOnClickListener(new View.OnClickListener() {
@@ -66,11 +73,18 @@ public class singleTopActivity extends AppCompatActivity {
         start2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(singleTopActivity.this,singleTaskActivity.class);
+                Intent intent = new Intent(singleTopActivity.this,singleTopActivity.class);
                 startActivity(intent);
             }
         });
         start3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(singleTopActivity.this,singleTaskActivity.class);
+                startActivity(intent);
+            }
+        });
+        start4.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(singleTopActivity.this,singleInstanceActivity.class);

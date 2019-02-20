@@ -3,14 +3,8 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
-    <Button
-        android:id="@+id/start_test1_button"
+    <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="start test1"/>
-    <Button
-        android:id="@+id/start_test2_button"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="start test2"/>
+        android:text="这个活动没有完全覆盖"/>
 </LinearLayout>

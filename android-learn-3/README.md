@@ -1,0 +1,9 @@
+**需要记住的细节**
+
+1 关于onNewIntent 一般用于重新设置 因为在singletask中 重新回到活动时不调用onCreate 需要更新数据的话就要用 onNewIntent
+
+2 当singleTop在栈顶 并重复调用自己时 经历的函数调用过程为 onPause->onNewIntent->onResume
+
+3 当singleTask不在栈顶 再次调用该活动时 如 ACAB后再调用C
+  顺序为 
+  </br>A onDestrory(之前已经stop了) -> B onPause -> C onNewIntent -> C onRestart -> C onStart -> C onResume -> B -> onStop -> B -> onDestroy
